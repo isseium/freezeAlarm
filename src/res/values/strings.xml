@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, FreezeAlermActivity!</string>
-    <string name="app_name">FreezeAlerm</string>
+    <string name="hello">Hello World, FreezeAlarmActivity!</string>
+    <string name="app_name">FreezeAlarm</string>
     <string-array name="location_array">
         <item >iwate</item>
     </string-array>

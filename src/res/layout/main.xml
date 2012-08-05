@@ -2,17 +2,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="20dip"
     android:orientation="vertical" >
 
+    <!-- TODO:isseium 表示文字列についてはあとで string.xml に -->
+    
+    <!-- タイトル -->
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
-    <Button
-        android:id="@+id/button1"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:text="freezeAlarm"
+	    android:layout_marginBottom="20dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30dip" />
+    
+    <!-- 地域 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dip"
+	    android:orientation="vertical" >
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="お住まいの地域"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <Spinner
+	        android:id="@+id/spinner1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:entries="@array/location_array" />
+	</LinearLayout>
+	
+    <!-- 時刻 -->
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dip"
+	    android:layout_marginBottom="20dip"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/TextView01"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="アラーム時刻"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <TimePicker
+	        android:id="@+id/timePicker1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	</LinearLayout>
+	    
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dip"
+	    android:layout_marginBottom="20dip"
+	    android:orientation="horizontal" >
+	    <Button
+	        android:id="@+id/button2"
+	        android:layout_weight="1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="テスト" />
+	    
+	    <Button
+	        android:id="@+id/button1"
+	        android:layout_weight="1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="完了" />
+	</LinearLayout>
+    
 
 </LinearLayout>
