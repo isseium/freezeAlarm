@@ -3,8 +3,24 @@
 
     <string name="hello">Hello World, FreezeAlarmActivity!</string>
     <string name="app_name">FreezeAlarm</string>
-    <string-array name="location_array">
-        <item >iwate</item>
+    <!-- array_label が表示名, array が api で指定するクエリ -->
+    <!-- FIXME:isseium key,valueでハッシュみたいなの使えないかな。このままだと定義の順番ミスが発生しそう & 末尾にしか追加できない -->
+    <string-array name="location_array_label">
+        <item >盛岡</item>
+        <item >宮古</item>
+        <item >大船渡</item>
+        <item >秋田</item>
+        <item >横手</item>
+        <item >弘前</item>
+        <item >八戸</item>
     </string-array>
-
+    <string-array name="location_array">
+        <item >Morioka</item>
+        <item >Miyako,Iwate</item>
+        <item >Ofunato,Iwate</item>
+        <item >Akita</item>
+        <item >Yokote</item>
+        <item >Hirosaki</item>
+        <item >Hachinohe</item>
+    </string-array>
 </resources>
