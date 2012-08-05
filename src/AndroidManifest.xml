@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-                <!-- BroadcastReceiverの登録 -->
+        <!-- BroadcastReceiverの登録 -->
         <receiver
             android:name=".MyReceiver">
             <!-- 受信するBroadcastIntentの種類を設定 -->
@@ -30,6 +30,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <activity android:name=".ConfigActivity" android:label="@string/app_name"></activity>
     </application>
     
     <!-- 注意：「起動完了」のBroadcastを受信するには、パーミッションが必要 -->

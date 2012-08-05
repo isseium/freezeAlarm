@@ -3,5 +3,8 @@
 
     <string name="hello">Hello World, FreezeAlermActivity!</string>
     <string name="app_name">FreezeAlerm</string>
+    <string-array name="location_array">
+        <item >iwate</item>
+    </string-array>
 
 </resources>
