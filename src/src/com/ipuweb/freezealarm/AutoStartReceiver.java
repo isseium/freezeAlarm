@@ -71,7 +71,14 @@ public class AutoStartReceiver extends BroadcastReceiver {
 		        		}
 		        		
 	        			Log.d("ALERM", alarmText);
-	        			this.alarm(alarmTitle, alarmText + alarmTitle);
+	        			
+	        			// タップ後の画面
+				        Intent nextIntent = new Intent(this.ctx, WeatherDetailActivity.class);
+				        // TODO:isseium 定数化
+				        nextIntent.putExtra("location_label", location_labels[Integer.parseInt(locationId)] );
+				        nextIntent.putExtra("minC", minC );
+				        
+	        			this.alarm(alarmTitle, alarmText + alarmTitle, nextIntent);
 		        	}
 		        }
 			}catch(Exception e){
@@ -85,11 +92,10 @@ public class AutoStartReceiver extends BroadcastReceiver {
      * @param title			
      * @param description
      */
-	public void alarm(String title, String description){
+	public void alarm(String title, String description, Intent intent){
     	Log.d("freezeAlart", "Notification description=" + description);
         NotificationManager mNotificationManager = (NotificationManager) this.ctx.getSystemService(Context.NOTIFICATION_SERVICE);
         Notification notification = new Notification(R.drawable.ic_launcher, description,System.currentTimeMillis());
-        Intent intent = new Intent(this.ctx, FreezeAlarmActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this.ctx, 0, intent, 0);
         notification.setLatestEventInfo(
                 ctx.getApplicationContext(),
@@ -97,6 +103,7 @@ public class AutoStartReceiver extends BroadcastReceiver {
                 description,
                 contentIntent);
 //        notification.flags = Notification.FLAG_ONGOING_EVENT;  // タップしても消さない
+        notification.vibrate = new long[]{0, 200, 100, 200, 100, 200};
         mNotificationManager.notify(R.string.app_name, notification);
         
 	}

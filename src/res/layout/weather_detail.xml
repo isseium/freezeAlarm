@@ -25,60 +25,26 @@
 	    android:layout_marginTop="10dip"
 	    android:orientation="vertical" >
 	    <TextView
-	        android:id="@+id/textView2"
+	        android:id="@+id/textViewMessage"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:text="お住まいの地域"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	
-	    <Spinner
-	        android:id="@+id/spinner1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:entries="@array/location_array_label" />
 	</LinearLayout>
 	
-    <!-- 時刻 -->
-
-	<LinearLayout
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_marginTop="20dip"
-	    android:layout_marginBottom="20dip"
-	    android:orientation="vertical" >
-
-	    <TextView
-	        android:id="@+id/TextView01"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:text="アラーム時刻"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	
-	    <TimePicker
-	        android:id="@+id/timePicker1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content" />
-	</LinearLayout>
-	    
 	<LinearLayout
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_marginTop="20dip"
 	    android:layout_marginBottom="20dip"
 	    android:orientation="horizontal" >
-	    <Button
-	        android:id="@+id/button2"
-	        android:layout_weight="1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="テスト" />
 	    
 	    <Button
 	        android:id="@+id/button1"
 	        android:layout_weight="1"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:text="完了" />
+	        android:text="閉じる" />
 	</LinearLayout>
     
 
