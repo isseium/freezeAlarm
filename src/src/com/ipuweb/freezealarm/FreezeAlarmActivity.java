@@ -48,6 +48,10 @@ public class FreezeAlarmActivity extends Activity implements OnClickListener{
         
         // view と 変数 をひも付け
         init();
+        
+        // Notification を削除
+        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancelAll();
     }
 	
 	/**
@@ -118,7 +122,7 @@ public class FreezeAlarmActivity extends Activity implements OnClickListener{
         	String alarmText, alarmTitle;
 		    String[] location_labels = getResources().getStringArray(R.array.location_array_label);
 	    	String locationId = Long.toString(spinner.getSelectedItemId()); // NOTE: long => int のcastなので桁落ちが発生しうるが、42億以上の地域を指定する見込みはないので
-	    	int minC = -10;	// テストのときも API たたいて実際の値もってくる？
+	    	int minC = -10;	// TODO:isseium テストのときも API たたいて実際の値もってくる？
     		alarmText = "明日の" + location_labels[Integer.parseInt(locationId)] + "の最低気温は、" + Integer.toString(minC) + "度です。";
     		if(minC < -4){
     			alarmTitle = "水道管凍結対策が必要です。";
