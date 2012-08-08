@@ -26,11 +26,15 @@ public class AutoStartReceiver extends BroadcastReceiver {
     	
     	// Android 電源ON時に自動でサービスを起動
     	// TODO:isseium actionName を調べてifを設定
-    	Intent serviceIntent = new Intent(context, FreezeAlarmService.class);
-	    context.startService(serviceIntent);
+    	
+    	// 端末起動起動したときはサービスを作成する
+    	if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+    		Intent serviceIntent = new Intent(context, FreezeAlarmService.class);
+    		context.startService(serviceIntent);
+    	}
 	    
 	    // AlarmManager からの受信（freezeAlarm)
-	    if(intent.getAction().equals("freezeAlarm")){
+    	else if(intent.getAction().equals("freezeAlarm")){
 	    	Log.d("freezeAlart", "Alarm");
 			WeatherAccessor wa = new WeatherAccessor();
 			
