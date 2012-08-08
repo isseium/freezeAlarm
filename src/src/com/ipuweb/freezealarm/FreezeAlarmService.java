@@ -40,8 +40,9 @@ public class FreezeAlarmService extends Service {
 	    
 	    // 1日ごとに起動
 	    //this.alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), FreezeAlarmService.INTERVAL_1DAY , sender);
+	    //こっちのほうが電池効率がいいらしい
+	    this.alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), FreezeAlarmService.INTERVAL_1DAY, sender);
 	    
-	    this.alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 10, sender);
 	    Log.d("FreezeAlram", "Set alarmmanager hour=" + set_hour + " minute=" + set_minute);
 	}
 
