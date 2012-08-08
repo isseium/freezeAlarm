@@ -13,7 +13,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="freezeAlarm"
+        android:text="@string/title"
 	    android:layout_marginBottom="20dip"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="30dip" />
@@ -28,7 +28,7 @@
 	        android:id="@+id/textView2"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:text="お住まいの地域"
+	        android:text="@string/place"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	
 	    <Spinner
@@ -51,7 +51,7 @@
 	        android:id="@+id/TextView01"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:text="アラーム時刻"
+	        android:text="@string/alarm_time"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	
 	    <TimePicker
@@ -71,14 +71,14 @@
 	        android:layout_weight="1"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:text="テスト" />
+	        android:text="@string/test" />
 	    
 	    <Button
 	        android:id="@+id/button1"
 	        android:layout_weight="1"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:text="完了" />
+	        android:text="@string/set" />
 	</LinearLayout>
     
 
