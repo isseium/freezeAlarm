@@ -18,8 +18,7 @@ public class WeatherAccessor {
 	public String apikey = "4bbe6c911e072823120508";
 	
 	/*
-	 * 翌日の天気情報JSONを取得する
-	 * 翌日の定義: 午前0〜3時は、当日とする
+	 * 天気情報JSONを取得する
 	 * @param Sting location 対象地域（クエリ）
 	 */
 	public JSONArray getTommorowWeather(String location){

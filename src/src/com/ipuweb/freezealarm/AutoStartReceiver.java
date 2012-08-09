@@ -108,10 +108,21 @@ public class AutoStartReceiver extends BroadcastReceiver {
         
 	}
     
+	/**
+	 * 現在システム時刻をもとに対象日を返す
+	 * 現在時刻が午前0-4時ではないときは、すでに当日は水道管対策をしていると仮定し、翌日の日付を返す
+	 * （28時までを一日と考える）
+	 * @return String format 対象日("YYYY-MM-DD"形式)
+	 */
 	public String getTargetDate(){
         // 現在時刻取得
-		long timeMillisEnd = System.currentTimeMillis() + 86400 * 1000; // 明日
-		// TODO 現在時刻が午前0-3時のときは、当日の日付を返す
+		long timeMillisEnd = System.currentTimeMillis();	// 当日
+		
+		SimpleDateFormat sdf_hour = new SimpleDateFormat("k");
+		String current_hour = sdf_hour.format(new Date(timeMillisEnd));
+		if(Integer.parseInt(current_hour) > 4){
+			timeMillisEnd += 86400 * 1000;	// 翌日
+		}
 		
 		// フォーマット定義
 		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
