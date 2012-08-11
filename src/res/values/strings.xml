@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="hello">Hello World, FreezeAlarmActivity!</string>
     <string name="app_name">FreezeAlarm</string>
+    <string name="title">freezeAlarm</string>
+    <string name="place">お住まいの地域</string>
+    <string name="alarm_time">アラーム時刻</string>
+    <string name="test">テスト</string>
+    <string name="set">完了</string>
     <!-- array_label が表示名, array が api で指定するクエリ -->
     <!-- FIXME:isseium key,valueでハッシュみたいなの使えないかな。このままだと定義の順番ミスが発生しそう & 末尾にしか追加できない -->
     <string-array name="location_array_label">
